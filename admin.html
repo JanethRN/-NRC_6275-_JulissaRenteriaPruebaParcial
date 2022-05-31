@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+
+     <!--Mostramos clientes a tráves de tabla-->
+     <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">telefono</th>
+                <th scope="col">estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Accedemos al array-->
+            {% for cliente in array_cliente %}
+
+            <tr>
+                <th>{{cliente.nombre}}</th>
+                <th>{{cliente.telefono}}</th>
+                <th>{{cliente.estado}}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!--Mostramos tiendas a tráves de tabla-->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">telefono</th>
+                <th scope="col">estado</th>
+                <th scope="col">gerente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Accedemos al array-->
+            {% for tienda in array_tienda %}
+
+            <tr>
+                <th>{{tienda.nombre}}</th>
+                <th>{{tienda.telefono}}</th>
+                <th>{{tienda.estado}}</th>
+                <th>{{tienda.gerente}}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
